@@ -1,0 +1,61 @@
+<%= form_for(@alumno) do |f| %>
+  <% if @alumno.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@alumno.errors.count, "error") %> prohibited this alumno from being saved:</h2>
+
+      <ul>
+      <% @alumno.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :apellido %><br>
+    <%= f.text_field :apellido %>
+  </div>
+  <div class="field">
+    <%= f.label :ci %><br>
+    <%= f.text_field :ci %>
+  </div>
+  <div class="field">
+    <%= f.label :fechanac %><br>
+    <%= f.date_select :fechanac %>
+  </div>
+  <div class="field">
+    <%= f.label :luegarnac %><br>
+    <%= f.text_field :luegarnac %>
+  </div>
+  <div class="field">
+    <%= f.label :domicilio %><br>
+    <%= f.text_field :domicilio %>
+  </div>
+  <div class="field">
+    <%= f.label :nombrepa %><br>
+    <%= f.text_field :nombrepa %>
+  </div>
+  <div class="field">
+    <%= f.label :profesionpa %><br>
+    <%= f.text_field :profesionpa %>
+  </div>
+  <div class="field">
+    <%= f.label :nombrema %><br>
+    <%= f.text_field :nombrema %>
+  </div>
+  <div class="field">
+    <%= f.label :profesionma %><br>
+    <%= f.text_field :profesionma %>
+  </div>
+  <div class="field">
+    <%= f.label :numeroTelef %><br>
+    <%= f.number_field :numeroTelef %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
