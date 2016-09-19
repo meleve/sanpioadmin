@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @cobro.tipo %>
+</p>
+
+<p>
+  <strong>Monto:</strong>
+  <%= @cobro.monto %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @cobro.nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @cobro.apellido %>
+</p>
+
+<p>
+  <strong>Ci:</strong>
+  <%= @cobro.ci %>
+</p>
+
+<%= link_to 'Edit', edit_cobro_path(@cobro) %> |
+<%= link_to 'Back', cobros_path %>

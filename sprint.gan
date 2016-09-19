@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2016-09-14" view-index="0" gantt-divider-location="515" resource-divider-location="-1" version="2.0">
+    <description/>
+    <view zooming-state="default:2" id="gantt-chart"/>
+    <view id="resource-table">
+        <field id="0" name="Nombre" width="55" order="0"/>
+        <field id="1" name="Función" width="44" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <calendar id="1" name="default">
+                <default-week sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+                <overriden-day-types/>
+                <days/>
+            </calendar>
+        </day-types>
+    </calendars>
+    <tasks color="#ff3300">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="13" name="Sprint 2" color="#ff3300" meeting="false" start="2016-09-13" duration="2" complete="0" priority="1" expand="true">
+            <task id="0" name="Investigar RoR" color="#ff3300" meeting="false" start="2016-09-14" duration="1" complete="0" priority="1" expand="true"/>
+            <task id="1" name="Crear Repositorio" color="#ff3300" meeting="false" start="2016-09-13" duration="2" complete="1" priority="1" expand="true"/>
+            <task id="2" name="Preparar Entorno de desarrollo" color="#ff3300" meeting="false" start="2016-09-14" duration="1" complete="0" priority="1" expand="true"/>
+            <task id="3" name="Crear estructura del proyecto" color="#ff3300" meeting="false" start="2016-09-13" duration="2" complete="0" priority="2" expand="true"/>
+            <task id="6" name="Crear Login" color="#ff3300" meeting="false" start="2016-09-14" duration="1" complete="0" priority="1" expand="true"/>
+            <task id="5" name="Registro de Alumnos" color="#ff3300" meeting="false" start="2016-09-14" duration="1" complete="0" priority="1" expand="true"/>
+        </task>
+        <task id="14" name="Sprint 3 28/09/2016" color="#ff3300" meeting="false" start="2016-09-14" duration="1" complete="0" priority="1" expand="true">
+            <task id="4" name="Pagina de Bienvenida" color="#ff3300" meeting="false" start="2016-09-14" duration="1" complete="0" priority="1" expand="true"/>
+            <task id="7" name="Creacion de Curso" color="#ff3300" meeting="false" start="2016-09-14" duration="1" complete="0" priority="1" expand="true"/>
+        </task>
+        <task id="16" name="sprint 4" color="#ff3300" meeting="false" start="2016-09-14" duration="9" complete="0" priority="1" expand="true">
+            <task id="17" name="Configuracion de Aranceles por curso" color="#ff3300" meeting="false" start="2016-09-14" duration="1" complete="0" priority="1" expand="true"/>
+            <task id="11" name="Interfaz de Matriculacion" color="#ff3300" meeting="false" start="2016-09-26" duration="1" complete="0" priority="1" expand="true"/>
+            <task id="8" name="Cuenta Corriente del Alumno" color="#ff3300" meeting="false" start="2016-09-26" duration="1" complete="0" priority="2" expand="true"/>
+        </task>
+        <task id="19" name="Sprint 5" color="#ff3300" meeting="false" start="2016-09-19" duration="15" complete="0" priority="1" expand="true">
+            <task id="10" name="Interfaz de Egreso" color="#ff3300" meeting="false" start="2016-09-22" duration="2" complete="0" priority="1" expand="true"/>
+            <task id="12" name="Modulo de Informe" color="#ff3300" meeting="false" start="2016-09-30" duration="6" complete="0" priority="1" expand="true"/>
+            <task id="9" name="Interfaz de Cobro" color="#ff3300" meeting="false" start="2016-09-19" duration="2" complete="0" priority="1" expand="true"/>
+        </task>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <taskdisplaycolumns>
+        <displaycolumn property-id="tpd3" order="0" width="156"/>
+        <displaycolumn property-id="tpd4" order="1" width="35"/>
+        <displaycolumn property-id="tpd5" order="2" width="34"/>
+    </taskdisplaycolumns>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>

@@ -1,0 +1,33 @@
+<h1>Listing Cobros</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tipo</th>
+      <th>Monto</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Ci</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cobros.each do |cobro| %>
+      <tr>
+        <td><%= cobro.tipo %></td>
+        <td><%= cobro.monto %></td>
+        <td><%= cobro.nombre %></td>
+        <td><%= cobro.apellido %></td>
+        <td><%= cobro.ci %></td>
+        <td><%= link_to 'Show', cobro %></td>
+        <td><%= link_to 'Edit', edit_cobro_path(cobro) %></td>
+        <td><%= link_to 'Destroy', cobro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cobro', new_cobro_path %>
