@@ -1,0 +1,23 @@
+
+<p>
+  <strong>Ci:</strong>
+  <%= @matriculacion.ci %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @matriculacion.nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @matriculacion.apellido %>
+</p>
+
+<p>
+  <strong>Tiempo:</strong>
+  <%= @matriculacion.tiempo %>
+</p>
+
+<%= link_to 'Editar', edit_matriculacion_path(@matriculacion) %> |
+<%= link_to 'Salir', matriculacions_path %>

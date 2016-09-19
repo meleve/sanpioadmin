@@ -1,0 +1,1 @@
+json.array! @matriculacions, partial: 'matriculacions/matriculacion', as: :matriculacion
