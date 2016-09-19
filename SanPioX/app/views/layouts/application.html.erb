@@ -7,53 +7,47 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<style type="text/css">
-	.nav {
-		color: blue;
-	}
-</style>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-        <span class="sr-only"><font><font>Navegación de palanca</font></font></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"><font><font>Marca</font></font></a>
-    </div>
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#"><font><font>Enlace </font></font><span class="sr-only"><font><font>(actual)</font></font></span></a></li>
-        <li><a href="#"><font><font>Enlazar</font></font></a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><font><font>Desplegable </font></font><span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#"><font><font>Acción</font></font></a></li>
-            <li><a href="#"><font><font>otra de las acciones</font></font></a></li>
-            <li><a href="#"><font><font>Algo más aquí</font></font></a></li>
-            <li class="divider"></li>
-            <li><a href="#"><font><font>separado enlace</font></font></a></li>
-            <li class="divider"></li>
-            <li><a href="#"><font><font>Un eslabón más separada</font></font></a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+<%= nav_bar :static  => :top , brand: " SPX",:alt => " SPX", :title => " SPX" , :responsive => true do %>
+        <%= menu_group do %>
+        <% if usuario_signed_in? %>
+        <%= menu_item " Registro de Alumnos", "/alumnos" %>
+        <%= menu_item " Creacion de Curso", "/cursos" %>
+        <%= menu_item " Cuenta Corriente", "/cuenta" %>
+        <%= menu_item " Cobros", "/cobros" %>
+        <%= menu_item " Matriculacion", "/matriculacions" %>
+        <% end %>
+<% end %>
+        <%= menu_group pull: :right do %>
+        <% if usuario_signed_in? %>
+        <%= menu_item  current_usuario.email , "" %>
+        <%= menu_item  " Editar Perfil", edit_usuario_registration_path %>
+        <%= menu_item  " Salir", destroy_usuario_session_path, method: :delete, :class => 'text-danger',method: :delete, data: { confirm: 'Esta seguro?' }  %>
+        <% else %>
+        <%= menu_item  " Entrar", new_usuario_session_path  %>
+        <%= menu_item  " Registro", new_usuario_registration_path %>
+        <% end %>
+        <% end -%>
+        <% end %>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <% if notice %>
+                    <%= bootstrap_flash %> 
+                    <% end %>
+                    <% if alert %>
+                    <%= bootstrap_flash %> 
+                    <% end %>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                <div class="well">
+                    <%=yield%>
+                </div>
+                </div>
+            </div>
         </div>
-        <button type="submit" class="btn btn-default"><font><font>Enviar</font></font></button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><font><font>Enlazar</font></font></a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<%= yield %>
-
-</body>
+    </body>
 </html>
