@@ -13,25 +13,31 @@
 
   <div class='panel panel-default'>
   <div class="panel-body">
-    <div class="form-group col-lg-3">
-    <%= f.label :curso %><br>
-    <%= f.text_field :curso, placeholder: 'Curso', class: 'form-control input-sm' %>
+
+  <div class="form-group col-lg-3">
+    <%= f.label :curso %>
+    <%= f.select :curso, options_for_select([['1º' ,'1º'], ['2º', '2º'], ['3º', '3º']]), { prompt: false}, {:class=>'form-control input-sm'}  %>
   </div>
-  <div class="field">
+  <div class="form-group col-lg-3">
     <%= f.label :especialidad %><br>
-    <%= f.text_field :especialidad, placeholder: 'Especialidad', class: 'form-control input-sm' %>
+    <%= f.select :especialidad, options_for_select([['Bachillerato con énfasis en Ciencias Sociales' ,'Bachillerato con énfasis en Ciencias Sociales'], ['Bachillerato Técnico en Informática', 'Bachillerato Técnico en Informática'], ['Bachillerato Técnico en Adm. de Negocios' ,'Bachillerato Técnico en Adm. de Negocios']]), { prompt: false}, {:class=>'form-control input-sm'}  %>
   </div>
-  <div class="field">
+  <div class="form-group col-lg-3">
     <%= f.label :seccion %><br>
-    <%= f.text_field :seccion, placeholder: 'Seccion', class: 'form-control input-sm' %>
+    <%= f.select :seccion, options_for_select([['Unica' ,'Unica'], ['A', 'A'], ['B' ,'B']]), { prompt: false}, {:class=>'form-control input-sm'}  %>
   </div>
-  <div class="field">
-    <%= f.label :tiempo %><br>
+  <div class="form-group col-lg-3">
+    <%= f.label :año %><br>
     <%= f.number_field :tiempo, placeholder: 'Año', class: 'form-control input-sm' %>
   </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+  <div class="panel-footer">          
+      <div class="text-right">
+        <%= button_tag(type: 'submit', class: "btn btn-success btn-sm") do %>
+          <span class="fa fa-check"></span> Guardar
+        <% end %>            
+      </div>
+    </div>
   </div>
 <% end %>

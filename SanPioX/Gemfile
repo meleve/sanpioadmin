@@ -18,7 +18,8 @@ group :development do
   gem 'mysql2', '~> 0.3.20'
   gem 'bootstrap-sass', '~> 3.3.6'
   gem 'devise'
-  gem 'rails4-autocomplete'
+  #gem "jquery-ui-rails"
+  #gem 'rails4-autocomplete'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
